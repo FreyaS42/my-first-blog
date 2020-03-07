@@ -11,6 +11,17 @@
   <h2> Random Facts </h2>
   <h3><strong>Fact 1</strong></h3>
     <p><b>An elephant is roughly the same weight as a blue whale's tongue</b></p>
+
+
+{% for post in posts %}
+    <div>
+      <p>published: {{ post.published_date }}</p>
+      <h2><a href="">{{ post.title }}</a></h2>
+      <p>{{ post.text|linebreaksbr }}</p>
+  </div>
+{% endfor %}
+
+
 </div>
 
 <a href="https://djangogirls.org">djangogirls...</a>
